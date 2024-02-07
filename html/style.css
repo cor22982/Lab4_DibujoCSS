@@ -71,6 +71,9 @@ h1.Titulo_Principal{
 .volumen + .indicadores{
     width: 300px;
     grid-area: 2 / 4;
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr 4fr 0.2fr 4fr 2fr;
+    grid-template-rows: 1fr 5fr 1fr;
 }
 
 .sintonizador{
@@ -97,3 +100,54 @@ h1.Titulo_Principal{
     margin-left: 22px;
     background-color: gray;
 }
+
+.Indicador_Numero{
+    width: 60px;
+    height: 100px;
+    background-color: #444444;   
+    margin-top: 10px;
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Indicador_Numero:nth-child(1) {
+   
+    grid-area: 1 / 2;
+   
+    margin-left: 10px;
+
+    
+}
+.Indicador_Numero:nth-child(2) {
+    grid-area: 1 / 4;
+    margin-left: 10px;
+    
+}
+.Indicador_Numero:nth-child(3) {
+    grid-area: 1 / 6;
+    margin-left: 1px;
+    
+}
+
+.texto_indicador {
+    font-size: 85px;
+    font-family: monospace, sans-serif;
+    color: white;
+    background: transparent;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(35%);
+}
+.texto_indicador::after{
+    content: "";
+    width: 90px;
+    height: 5px;
+    background-color: black;   
+    transform: translateX(-90%);
+}
+
+
+
