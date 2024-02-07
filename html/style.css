@@ -1,3 +1,81 @@
-h1{
-    color: red;
+*{
+    box-sizing: border-box;
+    margin: 0;
+    background-color: black;
+    
+}
+
+h1.Titulo_Principal{
+    display: flex;
+    justify-content: center;
+    font-family: 'Courier New', Courier, monospace; /* Utiliza una fuente monoespaciada */
+    color: #00FF00; /* Utiliza un color verde típico de muchas terminales */
+}
+
+.reloj{
+    display: flex;
+    width: 1000px;
+    height: 1000px;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+
+.reloj .caja{
+    display: flex;
+    background-color: white;
+    width: 800px;
+    height: 250px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 33px;
+    border: 7.5px solid #aaaaaa;
+}
+
+ 
+
+.caja .sombra{
+    display: flex;
+    background-color: #777777;
+    width: 765px;
+    height: 215px;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.caja .sombra .caja_reloj{
+    background-color: #444444;
+    width: 740px;
+    height: 190px;
+    border-radius: 10px;
+    display: grid;   
+    grid-template-columns: 1fr 2fr 0.12fr 4fr 0.5fr 3fr 1fr;
+    grid-template-rows: 1fr 3fr 1fr;
+}
+
+.caja_reloj *{
+    background-color: black;
+    height: 120px;
+}
+
+
+.caja_reloj .volumen{
+    width: 70px;
+    grid-area: 2 / 2;
+}
+
+.volumen + .indicadores{
+    width: 300px;
+    grid-area: 2 / 4;
+}
+
+.sintonizador{
+    width: 250px;
+    grid-area: 2 / 6;
+}
+
+.volumen ~ *{
+    border-radius: 10px;    
 }
