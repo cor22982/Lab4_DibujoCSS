@@ -62,7 +62,9 @@ h1.Titulo_Principal{
 
 
 .caja_reloj .volumen{
-    width: 70px;
+    width: 55px;
+    display: flex;
+    flex-direction: column;
     grid-area: 2 / 2;
 }
 
@@ -77,5 +79,21 @@ h1.Titulo_Principal{
 }
 
 .volumen ~ *{
-    border-radius: 10px;    
+    border-radius: 10px;
+    
+}
+
+.cambiadores:first-child{
+    margin-top: 18px;
+}
+.cambiadores:last-child{
+    margin-top: 9px;
+}
+
+.volumen > *{
+    width: 22px;
+    height: 4px;
+    margin-top: 8px;
+    margin-left: 22px;
+    background-color: gray;
 }
