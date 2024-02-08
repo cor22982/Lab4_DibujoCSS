@@ -79,6 +79,9 @@ h1.Titulo_Principal{
 .sintonizador{
     width: 250px;
     grid-area: 2 / 6;
+    display: flex;
+    flex-wrap: wrap;
+    
 }
 
 .volumen ~ *{
@@ -132,7 +135,7 @@ h1.Titulo_Principal{
 
 .texto_indicador {
     font-size: 85px;
-    font-family: monospace, sans-serif;
+    font-family: Impact, sans-serif;
     color: white;
     background: transparent;
     text-align: center;
@@ -149,5 +152,79 @@ h1.Titulo_Principal{
     transform: translateX(-90%);
 }
 
+.niveles{
+    width: 8px;
+    height: 6px;
+    background-color: #999999;   
+    margin-left: 15px;
+    
+}
+.niveles:first-child {
+    margin-left: 15px;
+}
 
 
+.sintonizador .cambiadores{
+    width: 250px;
+    height: 80px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 6fr 1fr;
+    grid-template-rows: 4fr 3fr 2fr 1fr 2fr 1fr;
+}
+
+
+.sintonizador .cambiadores::before{
+    content: "";
+    width: 25px;
+    height: 7px;
+    background-color: #4d4d4d;
+    grid-area: 3 / 2;
+    margin-left: 15px;
+}
+
+.cambiadores_2:nth-child(2){
+    width: 120px;
+    height: 7px;
+    background-color: #4d4d4d;
+    grid-area: 3 / 4;
+    
+}
+
+.cambiadores_2:first-child{
+    width: 120px;
+    height: 5px;
+    background-color: #4d4d4d;
+    grid-area: 2 / 4;
+    
+}
+
+
+.cambiadores_2:nth-child(3){
+    width: 25px;
+    height: 5px;
+    background-color: #4d4d4d;
+    grid-area: 2 / 2;
+    margin-left: 15px;
+}
+
+.cambiadores_2:nth-child(4){
+    width: 90px;
+    height: 20px;
+    font-size: 18px;   
+    background-color: transparent;
+    grid-area: 1 / 4;
+    margin-left: 45px;
+    margin-bottom: 20px;
+    font-family: Impact, sans-serif;
+    color: white;
+    text-align: right;
+    font-weight: bold;
+}
+
+.sintonizador::after{
+    content: "";
+    width: 5px;
+    height: 60px;
+    background-color: red;
+    transform: translate(-112px, -80%);
+}
