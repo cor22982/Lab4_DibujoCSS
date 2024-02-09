@@ -20,7 +20,23 @@ h1.Titulo_Principal{
     grid-template-columns: 1fr 6fr 1fr;
     grid-template-rows: 1fr 6fr 1fr;
 }
+.reloj .cabeza{
+    margin-top: 80px;
+    width: 650px;
+    margin-left: 70px;
+    height: 50px; 
+    background-color: transparent;
+    grid-area: 1 / 2;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
 
+.cabezal{
+    width: 70px;
+    height: 25px; 
+    background-color: white;
+}
 .reloj .perilla{
     width: 80px;
     height: 120px; 
@@ -85,7 +101,7 @@ h1.Titulo_Principal{
 }
 
 
-.perilla * , .perilla_2 *{
+.perilla * , .perilla_2 *, .cabezal{
     background-color: white;
     border: 6.5px solid #aaaaaa;
 }
@@ -301,3 +317,5 @@ h1.Titulo_Principal{
     background-color: red;
     transform: translate(-112px, -80%);
 }
+
+
