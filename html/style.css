@@ -1,7 +1,7 @@
 *{
     box-sizing: border-box;
     margin: 0;
-    background-color: black;
+    background-color: #cccccc;
     
 }
 
@@ -9,17 +9,85 @@ h1.Titulo_Principal{
     display: flex;
     justify-content: center;
     font-family: 'Courier New', Courier, monospace; /* Utiliza una fuente monoespaciada */
-    color: #00FF00; /* Utiliza un color verde típico de muchas terminales */
+    color: black; /* Utiliza un color verde típico de muchas terminales */
 }
 
 .reloj{
-    display: flex;
+    
     width: 1000px;
     height: 1000px;
-    align-items: center;
-    justify-content: center;
-    
+    display: grid;   
+    grid-template-columns: 1fr 6fr 1fr;
+    grid-template-rows: 1fr 6fr 1fr;
+}
 
+.reloj .perilla{
+    width: 80px;
+    height: 120px; 
+    margin-left: 50px;
+    margin-top: 70px;
+    background-color: transparent;
+    grid-area: 2 / 1;
+    display: grid;   
+    grid-template-columns: 2fr 1fr;
+}
+
+.perilla_2{
+    width: 80px;
+    height: 120px; 
+    margin-top: 70px;
+    background-color:transparent;
+    grid-area: 2 / 3;
+    display: grid;   
+    grid-template-columns: 1fr 2fr;
+}
+
+
+.perilla .base{
+    margin-top: 5px;
+    width: 28px;
+    height: 110px;
+    grid-column-start: 2;
+}
+.perilla_2 .base{    
+    width: 28px;
+    height: 110px;
+    grid-column-start: 1;
+    transform: translateY(-75%);
+}
+
+.perilla_2 .superior{
+    margin-top: 38px;
+    width: 40px;
+    height: 47px;
+    grid-column-start: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.perilla .superior{
+    margin-top: 38px;
+    width: 35px;
+    margin-left: 22px;
+    height: 47px;
+    grid-column-start: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.superior .muesca{
+    margin-top: 5px;
+    width: 33px;
+    height: 4px;
+    background-color: #aaaaaa;   
+    border: 0px;
+}
+
+
+.perilla * , .perilla_2 *{
+    background-color: white;
+    border: 6.5px solid #aaaaaa;
 }
 
 .reloj .caja{
@@ -31,7 +99,12 @@ h1.Titulo_Principal{
     justify-content: center;
     border-radius: 33px;
     border: 7.5px solid #aaaaaa;
+    grid-area: 2 / 2;
+    
 }
+
+
+
 
  
 
@@ -218,7 +291,7 @@ h1.Titulo_Principal{
     font-family: Impact, sans-serif;
     color: white;
     text-align: right;
-    font-weight: bold;
+    
 }
 
 .sintonizador::after{
