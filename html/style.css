@@ -317,5 +317,46 @@ h1.Titulo_Principal{
     background-color: red;
     transform: translate(-112px, -80%);
 }
+@keyframes sintoniazor-animation {
+    from {
+      /* pushes the sun down past the viewport */
+      transform: translateX(110vh);
+    }
+    to {
+      /* returns the sun to its default position */
+      transform: translateY(0);
+    }
+  }
 
 
+
+.base_reloj{
+    width: 530px;
+    height: 20px;
+    border-bottom: solid transparent 0px;
+    border-left: solid transparent 30px;
+    border-right: solid transparent 30px;
+    border-top: solid white 50px;
+    background-color: transparent;
+    grid-area: 3 / 2;
+    z-index: 2;
+    margin-bottom: 600px;
+    transform: translateX(25.5%); 
+ 
+    
+}
+
+
+.base_reloj2{
+    width: 550px;
+    height: 30px;
+    border-bottom: solid transparent 0px;
+    border-left: solid transparent 30px;
+    border-right: solid transparent 30px;
+    border-top: solid #aaaaaa 60px;
+    background-color: transparent;
+    grid-area: 3 / 2;
+    margin-left: 180px;
+    z-index: 1; 
+    transform: translateX(-10%); 
+}
