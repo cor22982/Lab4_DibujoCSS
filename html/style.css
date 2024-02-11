@@ -135,13 +135,18 @@ h1.Titulo_Principal{
 }
 
 .caja .sombra .caja_reloj{
-    background-color: #444444;
+    background-color: #777777;
     width: 740px;
     height: 190px;
     border-radius: 10px;
     display: grid;   
     grid-template-columns: 1fr 2fr 0.12fr 4fr 0.5fr 3fr 1fr;
     grid-template-rows: 1fr 3fr 1fr;
+    transition: background-color 1s ease;
+}
+
+.caja .sombra .caja_reloj:hover{
+    background-color: #444444;
 }
 
 .caja_reloj *{
