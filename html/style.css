@@ -315,17 +315,22 @@ h1.Titulo_Principal{
     width: 5px;
     height: 60px;
     background-color: red;
-    transform: translate(-112px, -80%);
+    animation: 2s linear 0s infinite alternate sintoniazor-animation;
+    
 }
 @keyframes sintoniazor-animation {
     from {
       /* pushes the sun down past the viewport */
-      transform: translateX(110vh);
+      transform: translate(-112px, -80%);
     }
     to {
       /* returns the sun to its default position */
-      transform: translateY(0);
+      transform: translate(-80px, -80%);
     }
+  }
+
+  .sintonizador:hover::after {
+    animation-play-state: paused;
   }
 
 
